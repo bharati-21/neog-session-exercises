@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FP | Homework ex. 1</title>
+    </head>
+    <body>
+        <h1>Write your own reduce using for loop</h1>
+        <script>
+            const reduceUsingFor = array => {
+                let accumulator = 0;
+                for(let a of array) {
+                    accumulator += a;
+                }
+                return accumulator;
+            } 
+            console.log(reduceUsingFor([18, 24, 1, 56, 74, 89, 37, 22]));
+            
+        </script>
+    </body>
+</html>
