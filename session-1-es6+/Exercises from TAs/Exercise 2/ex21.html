@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercise 2.1</title>
+    </head>
+    <body>
+        <p>Shhh! Peek at the console!</p>
+        <script>
+            const packIt = (...args) => console.log(args);packIt(1,2,3,5,5);
+            function packItES5() {
+                const arr = [];
+                for(let i = 0; i<arguments.length; i++) {
+                    arr.push(arguments[i]);
+                }
+                console.log(arr);
+            }
+            packItES5(1,2,3,5,5);
+        </script>
+    </body>
+</html>

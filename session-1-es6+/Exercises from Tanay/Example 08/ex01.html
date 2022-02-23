@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercise 1</title>
+    </head>
+    <body>
+        <p>Shhh! Peek at the console!</p>
+        <script>
+            const isBigger = (a, b) => a > b
+            console.log('Is 2 bigger than 3?', isBigger(2, 3))
+
+            // How would you write this with the least amount of characters
+            function Add22andReturn(num) {
+                let sum = 0
+                sum = num + 22
+                return sum
+            }
+
+            // const Add22andReturn2 = num => num + 22;
+
+            // Version 1
+            const Add22andReturn1 = (num) => {
+                let sum = 0
+                sum = num + 22
+                return sum
+            }
+
+            // Version 2
+            const Add22andReturn2 = (num) => {
+                return num + 22
+            }
+
+            // Version 3
+            const Add22andReturn3 = (num) =>
+            num + (22);
+            
+            const mapOverAnArray = () => [1, 2, 3, 4, 5].map(num => num + 22);
+        </script>
+    </body>
+</html>

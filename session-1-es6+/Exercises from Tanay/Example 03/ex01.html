@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercise 1</title>
+    </head>
+    <body>
+        <p>Shh! Peek at the console</p>
+        <script>
+            function something() {
+                // a = undefined
+                console.log(a); // undefined
+                var a = 2
+            }
+
+            something();
+            // As variable, function and class declarations are hoisted to the top their scopes. Variables declared with 'var' are auto initialized to 'undefined'.
+        </script>
+    </body>
+</html>

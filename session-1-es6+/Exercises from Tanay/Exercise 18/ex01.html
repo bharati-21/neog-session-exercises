@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercise 1</title>
+    </head>
+    <body>
+        <p>Shhh! Peek at the console!</p>
+        <script>
+            let name = 'Tanay'
+            let line = 'Helloo ' + name + ' !'
+            console.log(line); // Hello Tanay !
+
+            const helloTemp = `Hello ${name} !`
+            console.log(helloTemp); // Hello Tanay !
+
+            const giveMeFive = () => 5
+            const line2 = `Hey, my roll is ${giveMeFive()}`
+            console.log(line2); // Hey, my roll is 5
+
+            // Question: variable 5 // "odd" ->> write this function, using arrow
+            // Question: use this function in a sentence using template literal
+
+            // Shivam's answer
+            const oddOrEven = (num) => (num % 2 === 0 ? 'even' : 'odd')
+            const res = `The number 5 is ${oddOrEven(5)} ${name}`
+
+            const oddOrEven1 = num => num % 2 === 0? 'even' : 'odd';
+            console.log(`The number 5 is ${oddOrEven1(5)}`);
+        </script>
+    </body>
+</html>

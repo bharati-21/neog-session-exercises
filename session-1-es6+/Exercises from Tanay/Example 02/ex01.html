@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercise 1</title>
+    </head>
+    <body>
+        <p>Shh! Peek at the console!</p>
+        <script>
+            function something() {
+                console.log(a)
+                let a = 2
+            }
+
+            something();
+
+            // This will throw a ReferenceError saying that the variable a cannot be accessed before initialization as "a" is still in the Temporal dead zone at line #13. It's temporal dead zone ends when it's initialized. 
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercise 1.3</title>
+    </head>
+    <body>
+        <p>Shh! Peek at the console!</p>
+        <script>
+            const customer = {
+                name: "Bhaalo"
+            };
+            const card = {
+                amount: 20,
+                product: "Aaalo",
+                unitprice: 50
+            };
+            const message = "Hello " + customer.name + " wants to buy " + card.amount + " " + card.product + " for price of " + card.unitprice + " per piece";
+            // Hello Bhaalo wants to buy 20 Aloo for the price of 50 per piece.
+            console.log(message);
+
+            const templateLiteralMsg = `Hello ${customer.name} wants to buy ${card.amount} ${card.product} for price of ${card.unitprice} per piece`;
+            console.log(templateLiteralMsg)
+
+        </script>
+    </body>
+</html>

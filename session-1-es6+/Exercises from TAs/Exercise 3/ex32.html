@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercise 3.2</title>
+        <link rel="stylesheet" href="https://chassis.netlify.app/chassis.css" />
+    </head>
+    <body>
+        <p>Shh! peek at console!</p>
+        <script>
+            const obj = {
+                aloo : 1,
+                bhallo : 2
+            }
+
+            const {c : aloo = [2,3,4].push(5), aloo} = obj 
+
+            console.log(aloo) // SyntaxError aloo has already been declared
+        </script>
+    </body>
+</html>

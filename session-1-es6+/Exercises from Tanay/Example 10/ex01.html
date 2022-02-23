@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercise 1</title>
+    </head>
+    <body>
+        <p>Shh! Peek at the console!</p>
+        <script>
+            const giveMeAnObject = (a) => ({ value: a })
+            console.log(giveMeAnObject(5));
+            // {value: 5}
+            // Since only returning {} will confuse the compiler that this is the function block. Since there are no return statement it will throw an error. Hence {} has to be enclosed within () to tell the compiler that 'Hey I am returning a function!'
+        </script>
+    </body>
+</html>

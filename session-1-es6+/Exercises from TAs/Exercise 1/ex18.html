@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercise 1.8</title>
+    </head>
+    <body>
+        <p>Shhh! Peek at the console!</p>
+        <script>
+            var arithmeticsObj = {
+                sum: function sum(num1, num2) {
+                    return num1 + num2;
+                },
+                multiply: function multiply(num1, num2) {
+                    return num1 * num2;
+                }
+            };
+
+            // const obj = {
+            //     sum: (sum = (a,b) => a+b),
+            //     multiply: (multiply = (a,b) => a*b)
+            // };
+
+           
+            const shorthandObj = {
+                sum: (a,b) => a + b,
+                multiply: (a,b) => a * b
+            }
+
+            console.log(arithmeticsObj.sum(1,3));
+            console.log(arithmeticsObj.multiply(4,5));
+
+            console.log(shorthandObj.sum(1,3));
+            console.log(shorthandObj.multiply(4,5));
+        </script>
+    </body>
+</html>
