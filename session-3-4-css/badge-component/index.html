@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Badge Component</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="badge-container">
+                This is a badge
+                <div class="badge">4</div>
+            </div>
+            <div class="badge-container">
+                This is a badge
+                <div class="badge badge-large">4</div>
+            </div>
+            <button class="badge-container">
+                This is a badge
+                <div class="badge badge-left">4</div>
+            </button>
+            <button class="badge-container">
+                This is a badge
+                <div class="badge badge-left badge-large">4</div>
+            </button>
+            <button class="badge-container toggle-badge-btn">
+                This is a badge
+                <div class="badge badge-toggle  badge-large">4</div>
+            </button>
+            <div class="badge-container">
+                <i class="fas fa-home fa-2x"></i>
+                <div class="badge badge-large badge-secondary">15</div>
+            </div>
+        </div>
+        
+        <script>
+            const btnToggleBadge = document.querySelector('.toggle-badge-btn');
+            btnToggleBadge.addEventListener('click', () => {
+                console.log('Clicked!')
+                const badge = btnToggleBadge.querySelector('.badge-toggle').classList.toggle('hide-badge');
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,155 @@
+:root {
+    --simple-color: #E0E0E0;
+    --accent-color: #FF4081;
+    --primary-color: #3f51b5;
+    --simple-text-color: #000000de;
+    --other-text-color: #ffffff;
+    --color-warn: #F44336;
+}
+
+body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.chip-input-form {
+    display: flex;
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+.chip-input-form .chip-container {
+    border: none;
+    background-color: inherit;
+    height: 100%;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.chip-container {
+    gap: 0.5rem 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fafafa;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+.basic {
+    flex-direction: row;
+}
+
+.stacked {
+    flex-direction: column;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.chip-wide {
+    max-width: 200px;
+    width: 100%;
+}
+
+.chip {
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.75rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    color: var(--simple-text-color);
+    background-color: var(--simple-color);
+}
+
+
+.chip.chip-primary {
+    color:var(--other-text-color);
+    background-color: var(--primary-color);
+}
+
+.chip.chip-accent {
+    color: var(--other-text-color);
+    background-color: var(--accent-color);
+}
+
+.chip.chip-warn {
+    color: var(--other-text-color);
+    background-color: var(--color-warn);
+}
+
+.chip-wide .chip {
+    width: 100%;
+}
+
+.chip i {
+    font-size: 0.75rem;
+    background-color: #aaa;
+    padding: 2px;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+}
+
+.input-chip-text {
+    background-color: inherit;
+    border: none;
+    min-height: 30px;
+    outline: none;
+    height: 100%; 
+    flex-grow: 1;  
+}
+
+.chip-input-label {
+    align-self: start;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    transition: all 0.3s ease;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.chip-input-label.translate-label {
+    font-size: 0.8rem;
+    /* position:; */
+    top: 1.5rem;
+}
+

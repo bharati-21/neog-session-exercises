@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dialogs Component</title>
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    </head>
+    <body>
+        <main class="main">
+            <a href="" data-dialog='alert-dialog'  class="btn btn-primary">Open Alert Dialog</a>
+            <a href="" data-dialog='simple-dialog' class="btn btn-primary">Open Simple Dialog</a>
+            <a href="" data-dialog='confirmation-dialog' class="btn btn-primary">Open Confirmation Dialog</a>
+
+            <section class="dialog display-none alert-dialog">
+                <header class="dialog-header">
+                    <h3>Dialog header</h3>
+                </header>
+                <article class="dialog-body">
+                    <p>Dialog body text</p>
+                    <article class="dialog-list  display-none">
+                        <h3 class="list-item">
+                            <span class="fas fa-user"></span>
+                            User name
+                        </h3>
+                        <h3 class="list-item">
+                            <span class="fas fa-user"></span>
+                            User name
+                        </h3>
+                        <h3 class="list-item">
+                            <span class="fas fa-user"></span>
+                            User name
+                        </h3>
+                    </article>
+                </article>
+                <footer class="dialog-footer">
+                    <a href="" class="btn btn-accent action-btn">Action 1</a>
+                    <a href="" class="btn btn-accent action-btn">Action 2</a>
+                </footer>
+            </section>
+            <section class="dialog display-none simple-dialog">
+                <header class="dialog-header">
+                    <h3>Dialog header</h3>
+                </header>
+                <div class="dialog-body">
+                    <p class="display-none">Dialog body text</p>
+                    <article class="dialog-list">
+                        <h3 class="list-item">
+                            <span class="fas fa-user"></span>
+                            User name
+                        </h3>
+                        <h3 class="list-item">
+                            <span class="fas fa-user"></span>
+                            User name
+                        </h3>
+                        <h3 class="list-item">
+                            <span class="fas fa-user"></span>
+                            User name
+                        </h3>
+                    </article>
+                </div>
+                <footer class="dialog-footer display-none">
+                    <a href="" class="btn btn-accent action-btn">Action 1</a>
+                    <a href="" class="btn btn-accent action-btn">Action 2</a>
+                </footer>
+            </section>
+            <section class="dialog display-none confirmation-dialog">
+                <header class="dialog-header">
+                    <h3>Dialog header</h3>
+                </header>
+                <div class="dialog-body border-top border-bottom">
+                    <p class="display-none">Dialog body text</p>
+                    <article class="dialog-list">
+                        <label class="list-item">
+                            <input type="radio" name="item" id="item-1" />
+                            Item 1
+                        </label>
+                        <label class="list-item">
+                            <input type="radio" name="item" id="item-2" />
+                            Item 2
+                        </label>
+                        <label class="list-item">
+                            <input type="radio" name="item" id="item-3" />
+                            Item 3
+                        </label>
+                        <label class="list-item">
+                            <input type="radio" name="item" id="item-4" />
+                            Item 4
+                        </label>
+                        <label class="list-item">
+                            <input type="radio" name="item" id="item-5" />
+                            Item 5
+                        </label>
+                    </article>
+                </div>
+                <footer class="dialog-footer">
+                    <a href="" class="btn btn-accent action-btn">Action 1</a>
+                    <a href="" class="btn btn-accent action-btn">Action 2</a>
+                </footer>
+            </section>
+        </main>
+        <script type="module" src="./script.js"></script>
+    </body>
+</html>

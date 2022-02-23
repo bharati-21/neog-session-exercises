@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chip Component</title>
+        <link rel="stylesheet" href="./reset.css">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="chip-container justify-start align-center">
+            <div class="chip">One fish</div>
+            <div class="chip">Two fish</div>
+            <div class="chip chip-primary">Primary fish</div>
+            <div class="chip chip-accent">Accent fish</div>
+        </div>
+        <div class="chip-container chip-wide stacked justify-start align-start">
+            <div class="chip chip-primary">none</div>
+            <div class="chip chip-primary">Primary</div>
+            <div class="chip chip-accent">Accent</div>
+            <div class="chip chip-warn">Warn</div>
+        </div>
+
+        <div class="stacked chip-input-form justify-start align-center">
+            <div class="chip-container align-center flex-start">
+                <input type="text" class="input-chip-text" id="input-chip-text" >
+            </div>
+            <label for="input-chip-text" class="chip-input-label">Favorite Fruits</label>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

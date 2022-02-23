@@ -1,0 +1,334 @@
+:root {
+    --secondary-text-color: rgba(0,0,0,0.87);
+    --primary-text-color: rgba(0,0,0,0.67);
+    --darwer-bg-color: #ffffff;
+    --active-color: #6200eede;
+}
+
+html {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 1rem;
+    gap: 2rem;
+    background-color: #f2f2f2;
+    max-width: 1120px;
+    margin: auto;
+}
+
+.secondary-color {
+    color: var(--secondary-text-color);
+}
+
+.container {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-content {
+    align-items: center;
+}
+
+.display-none {
+    display: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.drawer {
+    background-color: var(--darwer-bg-color);
+    color: var(--primary-text-color);
+    max-width: 300px;
+    width: 100%;
+    gap: 0 1.5rem;
+    border-radius: 0.25rem;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    -ms-border-radius: 0.25rem;
+    -o-border-radius: 0.25rem;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.09);
+    position: relative;
+}
+
+.drawer-header {
+    padding: 1rem 1.25rem 0.75rem;
+}
+
+.drawer-header.position-fixed {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--darwer-bg-color);
+}
+
+.drawer-header .title {
+    margin-bottom: 0.5rem;
+}
+
+.drawer-header.no-title > .title {
+    display: none;
+}
+
+.drawer-header.no-header .title,
+.drawer-header.no-header .sub-title
+{
+    display: none;
+}
+
+.drawer-header.no-header {
+    padding: 0.25rem;
+}
+
+.border-top {
+    border-top: 1px solid #ccc;
+    padding-top: 1.5rem;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ccc;
+}
+
+.drawer-main {
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem 1rem; 
+}
+
+.drawer-main .drawer-item {
+    gap: 1rem 2rem;
+    cursor: pointer;
+    padding: 0.7rem 0.5rem;
+}
+
+.drawer-main .drawer-item.active-item {
+    color: var(--active-color);
+    border-radius: 0.25rem;
+    background-color: rgba(100, 0, 240, 0.15);
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    -ms-border-radius: 0.25rem;
+    -o-border-radius: 0.25rem;
+}
+
+.drawer-main .drawer-item:hover {
+    background-color: rgba(0,0,0,0.09);
+    border-radius: 0.25rem;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    -ms-border-radius: 0.25rem;
+    -o-border-radius: 0.25rem;
+}
+
+.drawer-item .item-icon {
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.drawer-item .item-name {
+    flex: 1;
+    pointer-events: none;
+    /* font-size: 1.1rem; */
+}
+
+.page-layout {
+    width: 100%;
+    background-color: #ffffff;
+    height: 500px;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+.page-layout .drawer {
+    overflow-y: scroll;
+    flex-shrink: 0;
+    animation: drawer-show-hide 0.1s ease-in;
+    -webkit-animation: drawer-show-hide 0.1s ease-in;
+}
+
+.page-layout, .page-layout .content, .page-layout .content > article * {
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+.page-layout .content-header, .page-layout .content article {
+    pointer-events: none;
+}
+
+.page-layout .content {
+    overflow-y: scroll;
+    flex: 1;
+}
+
+.content header {
+    background-color: #6200eede;
+    height: 60px;
+    display: flex;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 1.75rem;
+    color: var(--darwer-bg-color);
+}
+
+.dismissible .drawer {
+    position: relative;
+}
+
+@keyframes drawer-show-hide {
+    from {
+        display: none;
+        opacity: 0;
+    }
+    to {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+
+.modal {
+    position: relative;
+}
+
+.modal .drawer {
+    position: absolute;
+    z-index: 2;
+    height: inherit;
+}
+
+.drawer-open .content article > * {
+    z-index: 1;
+    position: relative;
+}
+
+.drawer-open .content article::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 0.5rem;
+    background-color: rgba(0,0,0,0.5);
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+.page-layout article p {
+    padding: 1rem;
+}
+
+h2.hamburger-icon{
+    cursor: pointer;
+    
+   
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    pointer-events: all;
+    /* padding: 2px; */
+}
+
+h2.hamburger-icon:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+h2.hamburger-icon > i {
+    pointer-events: none;
+    /* font-size: 24px; */
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .page-layout {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .page-layout .drawer {
+        max-width: 100%;
+        overflow-y:auto;
+    }
+
+    .page-layout .content {
+        z-index: 2;
+        position: relative;
+        overflow-y: auto;
+    }
+
+    .modal.page-layout .drawer{
+        /* width: 100%; */
+        z-index: 3;
+        height: max-content;
+        /* width: 300px; */
+    }
+
+
+}
+
+/* 
+
+.drawer-open .content article  {
+    position: relative;
+    z-index: 1;
+}
+
+.drawer-open .content article > *{
+    z-index: 1;
+    position: relative;
+}
+
+.drawer-open .content article::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+*/

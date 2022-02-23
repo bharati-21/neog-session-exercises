@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Snack Bar Component</title>
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    </head>
+    <body>
+        <main>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus officia consectetur voluptatibus soluta commodi quos necessitatibus cupiditate facilis voluptate ipsa. Blanditiis facere assumenda nam distinctio ratione qui inventore officia accusamus!
+        </main>
+        <div class="snackbar-container snackbar middle">
+             <p class="text-label">Can't send photo. Retry in 5 seconds.</p>
+             <div class="snackbar-actions">
+                 <a href="#" class="btn btn-primary">Retry</a>
+                 <a href="" class="close-icon">
+                    <i class="fas fa-times"></i>                 
+                </a>
+             </div>
+        </div>
+
+        <div class="snackbar-container snackbar baseline">
+            <p class="text-label">Can't send photo. Retry in 5 seconds.</p>
+            <div class="snackbar-actions">
+                <a href="#" class="btn btn-primary">Retry</a>
+                <a href="" class="close-icon">
+                   <i class="fas fa-times"></i>                 
+               </a>
+            </div>
+       </div>
+
+       <div class="snackbar-container snackbar stacked">
+           <p class="text-label">
+            This item already has the label "travel". You can add a new label.
+           </p>
+            <div class="snackbar-actions">
+                <a href="#" class="btn btn-primary">Retry</a>
+                <a href="" class="close-icon">
+                    <i class="fas fa-times"></i>                 
+                </a>
+            </div>
+        </div>
+
+        <script>
+
+            document.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', (e) => e.preventDefault());
+            })
+
+            const snackbars = document.querySelectorAll('.snackbar');
+            snackbars.forEach(snackbar => snackbar.addEventListener('click', handleSnackbarClos));
+
+            function handleSnackbarClos(e) {
+                if(e.target.classList.contains('close-icon') || e.target.classList.contains('fas')) {
+                    e.target.parentElement.parentElement.parentElement.style.display = 'none';
+                }
+            }
+        </script>
+    </body>
+</html>

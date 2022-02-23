@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Header Component</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <select name="app-bar-options" id="app-bar-options">
+            <option value="">---Choose---</option>
+            <option value="header-standard">Standard Header</option>
+            <option value="header-short">Short Header</option>
+            <option value="header-short-collapsed">Short, Collapsed Header</option>
+            <option value="header-prominent">Prominent Header</option>
+            <option value="header-prominent-dense">Prominent Dense Header</option>
+            <option value="header-scroll-short">Header short on scroll</option>
+        </select>
+        <header class="header header-standard display-none flex-container flex-row justify-between align-center  flex-wrap">
+            <h3 class="brand">
+                <span class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <span class="brand-name">
+                    San Francisco, CA
+                </span>
+            </h3>
+            <h3 class="actions flex-container">
+                <span class="action-icon">
+                    <i class="fas fa-download"></i>
+                </span>
+                <span class="action-icon">
+                    <i class="fas fa-print"></i>
+                </span>
+                <span class="action-icon">
+                    <i class="fas fa-bookmark"></i>
+                </span>
+            </h3>
+        </header>
+
+        <header class="header header-short display-none flex-container flex-row justify-between align-center  flex-wrap">
+            <h3 class="brand">
+                <span class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <span class="brand-name">
+                    San Francisco, CA
+                </span>
+            </h3>
+            <h3 class="actions flex-container">
+                <span class="action-icon">
+                    <i class="fas fa-download"></i>
+                </span>
+                <span class="action-icon">
+                    <i class="fas fa-print"></i>
+                </span>
+                <span class="action-icon">
+                    <i class="fas fa-bookmark"></i>
+                </span>
+            </h3>
+        </header>
+
+        <header class="header header-short-collapsed display-none flex-container flex-row justify-start align-center  flex-wrap">
+            <h3 class="brand">
+                <span class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <span class="brand-name">
+                    San Francisco, CA
+                </span>
+            </h3>
+            <h3 class="actions flex-container">
+                <span class="action-icon">
+                    <i class="fas fa-download"></i>
+                </span>
+                <span class="action-icon">
+                    <i class="fas fa-print"></i>
+                </span>
+                <span class="action-icon">
+                    <i class="fas fa-bookmark"></i>
+                </span>
+            </h3>
+        </header>
+        <header class="header header-prominent display-none flex-container flex-row justify-between align-start flex-wrap">
+            <div class="brand flex-container align-center">
+                <h3 class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </h3>
+                <h3 class="brand-name">
+                    San Francisco, CA
+                </h3>
+            </div>
+            <h3 class="actions flex-container">
+                <span class="action-icon">
+                    <i class="fas fa-download"></i>
+                </span>
+                <span class="action-icon">
+                    <i class="fas fa-print"></i>
+                </span>
+                <span class="action-icon">
+                    <i class="fas fa-bookmark"></i>
+                </span>
+            </h3>
+        </header>
+        <header class="header header-prominent-dense display-none flex-container flex-row justify-between align-start flex-wrap">
+            <div class="brand flex-container align-center">
+                <h3 class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </h3>
+                <h3 class="brand-name">
+                    San Francisco, CA
+                </h3>
+            </div>
+            <h3 class="actions flex-container">
+                <span class="action-icon">
+                    <i class="fas fa-download"></i>
+                </span>
+                <span class="action-icon">
+                    <i class="fas fa-print"></i>
+                </span>
+                <span class="action-icon">
+                    <i class="fas fa-bookmark"></i>
+                </span>
+            </h3>
+        </header>
+        <script src="./script.js"></script>
+    </body>
+</html>
