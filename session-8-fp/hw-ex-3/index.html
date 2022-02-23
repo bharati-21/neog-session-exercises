@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FP | Homework e.x. 3</title>
+    </head>
+    <body>
+        <h1>Return sum of all numbers at odd indices</h1>
+        <script>
+            const sumNumbersAtOddIndices = numbers => numbers.filter((num,index) => index % 2 !== 0).reduce((accumulator, currentValue) => accumulator + currentValue);
+            const numbers = [18, 24, 1, 56, 74, 89, 37, 22];
+            console.log(sumNumbersAtOddIndices(numbers));
+
+            const reducer = (acc, num, index) => index % 2 !== 0 ? acc + num : acc;
+            const sumOfOddIndices = numbers => numbers.reduce(reducer, 0);
+            console.log(sumOfOddIndices(numbers)) 
+        </script>
+    </body>
+</html>

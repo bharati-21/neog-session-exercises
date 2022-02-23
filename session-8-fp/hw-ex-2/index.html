@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FP | Homework e.x. 2</title>
+    </head>
+    <body>
+        <h1>Return sum of all odd numbers</h1>
+        <script>
+            const sumOddNumbers = numbers => numbers.filter(num => num % 2 !== 0).reduce((accumulator, currentValue) => accumulator + currentValue);
+            const numbers = [18, 24, 1, 56, 74, 89, 37, 22];
+            
+            console.log(sumOddNumbers(numbers));
+
+            const reducer = (acc, num) => num % 2 !== 0 ? num + acc : acc;
+            const oddNumSum = numbers => numbers.reduce(reducer, 0);
+            console.log(oddNumSum(numbers))
+        </script>
+    </body>
+</html>

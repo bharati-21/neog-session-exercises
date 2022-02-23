@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FP | Live ex. 5</title>
+    </head>
+    <body>
+        <h1>Shh! Peek at the console!</h1>
+        <script>
+            const numbers = [12, 54, 23, 55, 87, 45, 98, 12, 9, 37];
+            const incrementByOne = num => num + 1;
+            const numIncByOne = numbers.map(incrementByOne);
+            console.log(numIncByOne, numbers, numIncByOne === numbers);
+        </script>
+    </body>
+</html>

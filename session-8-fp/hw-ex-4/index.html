@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FP | Homework e.x. 4</title>
+    </head>
+    <body>
+        <h1>Return biggest number in the array</h1>
+        <script>
+            const biggestNum = numbers => numbers.reduce((accumulator, currentValue) => accumulator > currentValue ? accumulator : currentValue);
+            const numbers = [18, 24, 1, 56, 74, 89, 37, 22];
+            console.log(biggestNum(numbers));
+
+            const reducer = (acc, num) => acc > num ? acc : num;
+            const getBiggestNum = numbers => numbers.reduce(reducer, 0);
+            console.log(getBiggestNum(numbers));
+        </script>
+    </body>
+</html>

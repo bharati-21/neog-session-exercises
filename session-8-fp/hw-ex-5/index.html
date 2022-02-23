@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FP | Homework e.x. 5</title>
+    </head>
+    <body>
+        <h1>Return numbers divisible by 10</h1>
+        <script>
+            const getNumbersDivisibleBy10 = numbers => numbers.filter(num => num % 10 === 0);
+            const numbers = [10, 24, 1, 56, 70, 85, 37, 20];
+            console.log(getNumbersDivisibleBy10(numbers));
+
+            const filterFunc = num => num % 10 === 0;
+            const numsDivisibleBy10 = numbers => numbers.filter(filterFunc);
+            console.log(numsDivisibleBy10(numbers));
+        </script>
+    </body>
+</html>

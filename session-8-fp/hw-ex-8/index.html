@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FP | Homework e.x. 8</title>
+    </head>
+    <body>
+        <h1>Return object with sum of odd and even numbers separately</h1>
+        <script>
+            const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+            const numLengthArray = words.reduce((accumulator, currentValue) => accumulator[currentValue.length] ? {...accumulator, [currentValue.length] : accumulator[currentValue.length]+1} :  {...accumulator, [currentValue.length]: 1 }, {});
+            console.log(numLengthArray);
+
+            const wordsWithVowel = words.filter(word => word.includes('a') || word.includes('e') || word.includes('i') || word.includes('o') || word.includes('u'))
+            console.log(wordsWithVowel);
+
+            const getWordLengthCount = words => words.reduce((accumulator, currentValue) => accumulator[currentValue.length] ? {...accumulator, [currentValue.length] : accumulator[currentValue.length]+1} :  {...accumulator, [currentValue.length]: 1 }, {});
+            console.log(getWordLengthCount(words));
+
+            const getWordsWithVowel = words => words.filter(word => word.includes('a') || word.includes('e') || word.includes('i') || word.includes('o') || word.includes('u'));
+            console.log(getWordsWithVowel(words));
+
+            const filterFunction = word => word.includes('a') || word.includes('e') || word.includes('i') || word.includes('o') || word.includes('u');
+            const filterWordsWithVowel = words => words.filter(filterFunction);
+            console.log(filterWordsWithVowel(words));
+        </script>
+    </body>
+</html>

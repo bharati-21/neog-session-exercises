@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FP | Homework e.x. 9</title>
+    </head>
+    <body>
+        <h1>Return object with key as item and value as word length</h1>
+        <script>
+            const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+            const wordsObject = words.map(word => ({key: word, value: word.length}));
+            console.log(wordsObject);
+
+            const getWordsObject = words => words.map(word => ({key: word, value: word.length}));
+            console.log(getWordsObject(words));
+
+            const mapFunction = word => ({key: word, value: word.length});
+            const getWordsLenObj = words => words.map(mapFunction);
+            console.log(getWordsLenObj(words)); 
+        </script>
+    </body>
+</html>

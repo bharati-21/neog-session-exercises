@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FP | Homework e.x. 7</title>
+    </head>
+    <body>
+        <h1>Return object with sum of odd and even numbers separately</h1>
+        <script>
+            const numbers = [10, 24, 1, 56, 70, 85, 37, 20];
+            const sumNumbers = {};
+            sumNumbers["odd"] = numbers.filter(num => num % 2 !== 0).reduce((accumulator, currentValue) => accumulator + currentValue);
+            sumNumbers["even"] = numbers.filter(num => num % 2 === 0).reduce((accumulator, currentValue) => accumulator + currentValue);
+            console.log(sumNumbers);
+
+            oddEvenSum = numbers.reduce((accumulator, currentValue) => currentValue % 2 === 0 ?
+                 {odd: accumulator.odd, even: accumulator.even + currentValue} : {odd: accumulator.odd + currentValue, even: accumulator.even} , {odd: 0, even: 0});
+            console.log(oddEvenSum);
+
+            const getOddEvenSumObject = numbers =>  numbers.reduce((accumulator, currentValue) => currentValue % 2 === 0 ?
+                 {odd: accumulator.odd, even: accumulator.even + currentValue} : {odd: accumulator.odd + currentValue, even: accumulator.even} , {odd: 0, even: 0});
+            console.log(getOddEvenSumObject(numbers));
+
+            const reducer = (oddEvenObj, num) => num % 2 === 0? {...oddEvenObj, even: oddEvenObj.even + num} : {...oddEvenObj, odd: oddEvenObj.odd + num};
+            const getOddEvenObject = numbers => numbers.reduce(reducer, {odd: 0, even: 0});
+            console.log(getOddEvenObject(numbers));
+        </script>
+    </body>
+</html>
