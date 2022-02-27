@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+label {
+  font-size:1.25rem;
+}
+
+#text-address {
+  padding: 0.25rem 0.75rem;
+  width: 100%;
+  font-size:1.25rem;
+}
+
+.loader {
+  color: green;
+  margin: 1rem auto;
+}
+
+.error {
+  color: red;
+  margin: 1rem auto;
+}
+
+.no-data-message {
+  margin: 1rem auto;
+  background-color:yellow;
+  padding: 1rem;
+}
+
+table {
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
+thead tr {
+  background-color: hotpink;
+  color: #fff;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightgreen;
+}
+
+tbody tr:nth-child(even) {
+  background-color: skyblue;
+}
+
+button {
+  background-color:hotpink;
+  outline: none;
+  padding:10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 0.15em rgba(0,0,0,0.6);
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.9);
+}
