@@ -46,9 +46,8 @@ const App = () => {
 
   const addItemToCart = (event, item) => {
     if(cartItems.find(cartItem => cartItem.id === item.id)) {
-      const selectedCartItem = cartItems.find(cartItem => cartItem.id === item.id);
-      
-      setCartItems(previousCartItems => [{...selectedCartItem, quantity: selectedCartItem.quantity + 1, price: selectedCartItem.unitPrice * (selectedCartItem.quantity + 1)}, ...previousCartItems.filter(cartItem => cartItem.id !== item.id)])
+    
+      setCartItems(previousCartItems => previousCartItems.reduce((accum, currentItem) =>  currentItem.id === item.id ? [{...currentItem, quantity: currentItem.quantity + 1, price: currentItem.unitPrice * (currentItem.quantity + 1)}, ...accum] : [...accum, currentItem],[]))
     }
     else {
       setCartItems(previousCartItems => [item, ...previousCartItems])
